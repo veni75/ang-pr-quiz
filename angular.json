@@ -31,6 +31,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -127,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "ang-pr-quiz"
+  "defaultProject": "ang-pr-quiz",
+  "cli": {
+    "analytics": "fce99891-6a78-4ef2-bc7e-c5f45bc7f73a"
+  }
 }

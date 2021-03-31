@@ -1,0 +1,83 @@
+{
+  "quiz": [
+    {
+      "id": 1,
+      "title": "KAScarface Ronaldson",
+      "description": "sronaldson0@uol.com",
+      "question": "62825 Towne Lane",
+      "active": true
+    },
+    {
+      "id": 2,
+      "title": "LAScarface Ronaldson",
+      "description": "sronaldson0@uol.com",
+      "question": "62825 Towne Lane",
+      "active": false
+    },
+    {
+      "id": 4,
+      "title": "FScarface Ronaldson",
+      "description": "sronaldson0@uol.com",
+      "question": "62825 Towne Lane",
+      "active": false
+    },
+    {
+      "id": 5,
+      "title": "HScarface Ronaldson",
+      "description": "sronaldson0@uol.com",
+      "question": "62825 Towne Lane",
+      "active": false
+    }
+  ],
+  "question": [
+    {
+      "id": 1,
+      "question": "Mikor?",
+      "answers": ["most","tegnap","holnap", "sose"],
+      "correct": [true,false,false, false],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 2,
+      "question": "Hol?",
+      "answers": ["most","tegnap","holnap", "sose"],
+      "correct": [true,false,false, false],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 3,
+      "question": "Miért?",
+      "answers": ["most","tegnap","holnap", "sose"],
+      "correct": [true,false,false, false],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 4,
+      "question": "Minek?",
+      "answers": ["most","tegnap","holnap", "sose"],
+      "correct": [true,false,false, false],
+      "points": 1,
+      "active": false
+    },
+    {
+      "id": 5,
+      "question": "Mennyi?",
+      "answers": ["most","tegnap","holnap", "sose"],
+      "correct": [true,false,false, false],
+      "points": 1,
+      "active": false
+    }
+  ],
+  "student": [
+    {
+      "id": 1,
+      "name": "Enikő",
+      "email": "eniko@gmail.com",
+      "points": 0,
+      "active": true
+    } 
+  ]
+}
