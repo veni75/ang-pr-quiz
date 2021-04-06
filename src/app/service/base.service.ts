@@ -1,55 +1,70 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BaseService<T extends { id: number }> {
+  endPoint:string = 'http://localhost:3000';
   entityName: string = '';
   list$: BehaviorSubject<T[]> = new BehaviorSubject<T[]>([]);
-  apiUrl: string = "http://localhost:3000/data.json";
+  item$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+  error$: Subject<string> = new Subject<string>();
+ 
   constructor(
     public http: HttpClient,
     @Inject('entityName') entityName: string,
   ) {
     this.entityName = entityName;
+    this.endPoint += `/${this.entityName}`;
   }
 
   getAll(): void {
-    this.http.get<T[]>(`${this.apiUrl}/${this.entityName}`)
+    this.http.get<T[]>(this.endPoint)
       .subscribe(
         list => this.list$.next(list),
-        err => console.error(err)
+        err => this.error$.next(err)
       )
   }
 
-  get(id: number): Observable<T> {
-    return this.http.get<T>(`${this.apiUrl}/${this.entityName}/${id}`);
+  get(id: number): void {
+    this.http.get<T>(`${this.endPoint}/${id}`)
+    .subscribe(
+      //data => this.list$.next(data),
+      //err => this.error$.next(err)
+    );
   }
 
-  create(entity: T): Observable<T> {
-    return this.http.post<T>(`${this.apiUrl}/${this.entityName}`,
-      entity).pipe(
-        tap(e => this.getAll())
+  create(item: T): void {
+     this.http.post<T>(`${this.endPoint}`,
+      item).subscribe(
+        //data => this.list$.next(data),
+        //err => this.error$.next(err)
       );
   }
-  update(entity: T): Observable<T> {
-    return this.http.patch<T>(`${this.apiUrl}/${this.entityName}/${entity.id}`, entity);
+  update(item: T): void {
+     this.http.patch<T>(`${this.endPoint}/${item.id}`, item).subscribe(
+      //data => this.list$.next(data),
+      //err => this.error$.next(err)
+    );
   }
-  remove(entity: T): Observable<T> {
-    return this.http.delete<T>(`${this.apiUrl}/${this.entityName}/${entity.id}`);
+  remove(id:number): void {
+    this.http.delete<T>(`${this.endPoint}/${id}`).subscribe(
+      () => {},
+      err => this.error$.next(err)
+    );
   }
 
   like(key:string,value:string):Observable<T[]>{
     key= `${key}_like`;
-    const query = `${this.apiUrl}/${this.entityName}?${key}=${value}`;
+    const query = `${this.endPoint}?${key}=${value}`;
     return this.http.get<T[]>(query);
   }
 
   fullText(value:string):Observable<T[]>{
-    const query = `${this.apiUrl}/${this.entityName}?q=${value}`;
+    const query = `${this.endPoint}?q=${value}`;
     return this.http.get<T[]>(query);
   }
 }

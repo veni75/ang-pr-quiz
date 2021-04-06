@@ -14,6 +14,7 @@ import { NavigationComponent } from './page/navigation/navigation.component';
 import { QuizEditorComponent } from './page/quiz-editor/quiz-editor.component';
 import { QuestionEditorComponent } from './page/question-editor/question-editor.component';
 import { CardComponent } from './common/card/card.component';
+import { CheckboxComponent } from './common/checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CardComponent } from './common/card/card.component';
     NavigationComponent,
     QuizEditorComponent,
     QuestionEditorComponent,
-    CardComponent
+    CardComponent,
+    CheckboxComponent
   ],
   imports: [
     BrowserModule,

@@ -18,8 +18,8 @@ export class QuizService {
     return this.http.get<Quiz[]>(this.serverUrl);
   }
 
-  get(quiz:Quiz):Observable<Quiz>{    
-    return this.http.get<Quiz>(`${this.serverUrl}/${quiz.id}`);
+  get(id:number):Observable<Quiz>{    
+    return this.http.get<Quiz>(`${this.serverUrl}/${id}`);
   }
 
   create(quiz:Quiz):Observable<Quiz>{      

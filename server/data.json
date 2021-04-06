@@ -2,29 +2,29 @@
   "quiz": [
     {
       "id": 1,
-      "title": "KAScarface Ronaldson",
-      "description": "sronaldson0@uol.com",
+      "title": "Matematika",
+      "description": "Matematika",
       "question": "62825 Towne Lane",
       "active": true
     },
     {
       "id": 2,
-      "title": "LAScarface Ronaldson",
-      "description": "sronaldson0@uol.com",
+      "title": "Fizika",
+      "description": "Fizika",
       "question": "62825 Towne Lane",
       "active": false
     },
     {
       "id": 4,
-      "title": "FScarface Ronaldson",
-      "description": "sronaldson0@uol.com",
+      "title": "Kémia",
+      "description": "Kémia",
       "question": "62825 Towne Lane",
       "active": false
     },
     {
       "id": 5,
-      "title": "HScarface Ronaldson",
-      "description": "sronaldson0@uol.com",
+      "title": "Biológia",
+      "description": "Biológia",
       "question": "62825 Towne Lane",
       "active": false
     }
@@ -32,41 +32,65 @@
   "question": [
     {
       "id": 1,
-      "question": "Mikor?",
-      "answers": ["most","tegnap","holnap", "sose"],
-      "correct": [true,false,false, false],
+      "question": "2+2?",
+      "answers": ["4","5","6", "7"],
+      "correct": "4",
       "points": 1,
       "active": true
     },
     {
       "id": 2,
-      "question": "Hol?",
-      "answers": ["most","tegnap","holnap", "sose"],
-      "correct": [true,false,false, false],
+      "question": "5*8?",
+      "answers": ["40","45","52", "85"],
+      "correct": "40",
       "points": 1,
       "active": true
     },
     {
       "id": 3,
-      "question": "Miért?",
-      "answers": ["most","tegnap","holnap", "sose"],
-      "correct": [true,false,false, false],
+      "question": "Gravitáció?",
+      "answers": ["F","G","g", "K"],
+      "correct": "F",
       "points": 1,
       "active": true
     },
     {
       "id": 4,
-      "question": "Minek?",
-      "answers": ["most","tegnap","holnap", "sose"],
-      "correct": [true,false,false, false],
+      "question": "Energia?",
+      "answers": ["E","N","R", "S"],
+      "correct": "E",
       "points": 1,
       "active": false
     },
     {
       "id": 5,
-      "question": "Mennyi?",
-      "answers": ["most","tegnap","holnap", "sose"],
-      "correct": [true,false,false, false],
+      "question": "Natrium?",
+      "answers": ["Na","Cu","Zn", "Fe"],
+      "correct": "Na",
+      "points": 1,
+      "active": false
+    },
+    {
+      "id": 6,
+      "question": "Klór?",
+      "answers": ["Cl","Br","Ca", "Fe"],
+      "correct": "Cl",
+      "points": 1,
+      "active": false
+    },
+    {
+      "id": 7,
+      "question": "DNS?",
+      "answers": ["dezoxiribonukleinsav ","ribonukleinsav ","dezoxinukleinsav ", "dezoxiribosav "],
+      "correct": "dezoxiribonukleinsav",
+      "points": 1,
+      "active": false
+    },
+    {
+      "id": 8,
+      "question": "RNS?",
+      "answers": ["ribonukleinsav ","nukleinsav ","ribosav ", "dezoxiribonukleinsav"],
+      "correct": "ribonukleinsav",
       "points": 1,
       "active": false
     }

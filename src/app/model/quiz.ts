@@ -4,6 +4,6 @@ export class Quiz {
     id:number=0;
     title:string=''; 
     description:string='';
-    questions:number[]=[]; 
+    questions:Question[]=[]; 
     active:boolean=false;
 }

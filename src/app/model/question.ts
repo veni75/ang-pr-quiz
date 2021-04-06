@@ -4,7 +4,7 @@ export class Question {
     id: number = 0;
     question: string = '';
     answers: string[] = [];
-    correct: boolean[] = [false,false,false,false];
+    correct: string = '';
     points: number = 0;
     active: boolean = false;
 }
